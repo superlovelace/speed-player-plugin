@@ -1,0 +1,17 @@
+{
+  "name": "SpeedPlayer",
+  "description": "一款可以自定义视频倍速播放的插件",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "logo.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+]
+}
