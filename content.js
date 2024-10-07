@@ -15,8 +15,8 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 		showAlert("页面上没有视频播放器！");
 	}else if(!isNumber(data)){
 		showAlert("请不要输入其他东西！");
-	}else if(data<=0){
-		showAlert("数值必须大于零！")
+	}else if(data<=0 || data>16){
+		showAlert("数值越界！合理范围[0-16]！")
 	}else{
 		document.querySelector("video").playbackRate = data;
 		showAlert("当前播放速度："+data);
