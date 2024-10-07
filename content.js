@@ -1,12 +1,15 @@
+// 提示方法
 function showAlert(message) {
     alert(message);
 }
 
+// 判断输入的数据是不是数字
 function isNumber(value) {
     return !isNaN(Number(value)) && value.trim() !== '';
 }
 
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+// 接收传递的消息
+chrome.runtime.onMessage.addListener(function(request) {
     // 接收到数据
     const data = request.data;
 	

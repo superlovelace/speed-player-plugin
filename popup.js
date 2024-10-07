@@ -1,3 +1,4 @@
+// 表单提交事件
 $('form').on('submit', function(event) {
 	event.preventDefault();  // 阻止默认提交行为
 
